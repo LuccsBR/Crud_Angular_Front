@@ -14,7 +14,7 @@ export class AppComponent {
   apiURL : string;
 
   constructor(private http: HttpClient) {
-    this.apiURL = 'http://localhost:3000';
+    this.apiURL = 'https://lucas-matheus-api22.vercel.app';
     this.READ_tarefas();
   }
 
@@ -32,7 +32,7 @@ export class AppComponent {
     tarefaAserModificada).subscribe(
     resultado => { console.log(resultado); this.READ_tarefas(); });
    }
-   
+
   READ_tarefas() {
     this.http.get<Tarefa[]>(`${this.apiURL}/api/getAll`).subscribe(
       resultado => this.arrayDeTarefas=resultado);
