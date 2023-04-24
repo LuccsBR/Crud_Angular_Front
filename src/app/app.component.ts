@@ -14,7 +14,7 @@ export class AppComponent {
   apiURL : string;
 
   constructor(private http: HttpClient) {
-    this.apiURL = 'https://lucas-matheus-api22.vercel.app';
+    this.apiURL = 'lucas-matheusapi-production.up.railway.app';
     this.READ_tarefas();
   }
 
